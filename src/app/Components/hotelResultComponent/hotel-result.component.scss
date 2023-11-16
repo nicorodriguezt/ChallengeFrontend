@@ -1,0 +1,125 @@
+:host {
+  display: grid;
+  justify-content: center;
+  height: 80vh;
+  overflow: hidden;
+  grid-template-rows: min-content;
+}
+
+
+.main-title {
+  color: #3b83d2;
+  font-size: 28px;
+  margin-bottom: 24px;
+  width: 750px;
+}
+
+.main-card {
+  width: 750px;
+  background: #dedddd;
+  height: 200px;
+  margin-bottom: 18px;
+  display: grid;
+  grid-template-columns: 200px 350px 200px;
+}
+
+.card-content {
+  height: 67vh;
+}
+
+.content-container {
+  height: 64vh;
+  display: grid;
+  margin-left: 32px;
+  margin-right: 32px;
+  grid-template-columns: auto;
+  grid-gap: 12px;
+}
+
+.result-container {
+  width: 800px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border-radius: 4px;
+}
+
+.result-container::-webkit-scrollbar {
+  display: none;
+}
+
+.hotel-image {
+  height: 200px;
+  width: 200px;
+}
+
+.hotel-info {
+  padding: 24px;
+}
+
+.hotel-name {
+  color: #3b83d2;
+  font-size: 24px;
+  margin-left: 24px;
+  margin-bottom: 16px;
+}
+
+.hotel-checkin {
+  color: #929292;
+  margin-bottom: 8px;
+  margin-left: 24px;
+}
+
+.hotel-checkout {
+  color: #929292;
+  margin-left: 24px;
+}
+
+.hotel-info-right {
+  display: grid;
+  align-content: space-between;
+  justify-content: end;
+}
+
+.hotel-rating {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: end;
+  align-items: end;
+  color: #929292;
+  font-size: 19px;
+}
+
+.star-icon {
+  color: #FDCC0D;
+}
+
+.hotel-price {
+  color: #929292;
+  font-size: 16px;
+}
+
+.button-container {
+  text-align: end;
+}
+
+.pages-container{
+  display: grid;
+  grid-template-columns: 48px min-content 48px;
+  justify-content: center;
+}
+
+.forward-button {
+  color: #3b83d2;
+}
+
+.back-button {
+  color: #3b83d2;
+}
+
+.current-page {
+  font-size: 24px;
+  display: grid;
+  align-content: center;
+  margin-right: 5px;
+  grid-column: 2 / 3;
+}

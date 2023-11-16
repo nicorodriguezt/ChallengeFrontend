@@ -1,0 +1,30 @@
+<mat-card class="main-card">
+  <mat-card-header>
+    <mat-card-title class="main-title">Hotel Search</mat-card-title>
+  </mat-card-header>
+  <mat-card-content class="card-content">
+    <div class="content-container" [formGroup]="form">
+      <div class="item-container">
+        <label class="form-title" for="destination">Destination</label>
+        <input type="text" formControlName="destination" placeholder="Enter destination" id="destination" name="destination">
+      </div>
+      <div CLASS="date-container">
+        <div class="item-container">
+          <label class="form-title" for="checkin">Check-in</label>
+          <input type="date" formControlName="checkin" placeholder="Enter checkin date" id="checkin" name="checkin">
+        </div>
+        <div class="item-container">
+          <label class="form-title" for="checkout">Check-out</label>
+          <input type="date" formControlName="checkout" placeholder="Enter checkout date" id="checkout" name="checkout">
+        </div>
+      </div>
+      <div class="item-container">
+        <label class="form-title" for="guests">Guests</label>
+        <input type="number" formControlName="guests" placeholder="Enter guests number" id="guests" name="guests">
+      </div>
+    </div>
+  </mat-card-content>
+  <mat-card-footer class="card-footer">
+    <button  class="button-import" (click)="getHotels()" [disabled]="!form.valid">Search</button>
+  </mat-card-footer>
+</mat-card>

@@ -1,0 +1,96 @@
+@use '@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$deviceWebUserInterface-primary: mat.define-palette(mat.$indigo-palette);
+$deviceWebUserInterface-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$deviceWebUserInterface-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$deviceWebUserInterface-theme: mat.define-light-theme((
+  color: (
+    primary: $deviceWebUserInterface-primary,
+    accent: $deviceWebUserInterface-accent,
+    warn: $deviceWebUserInterface-warn,
+  )
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($deviceWebUserInterface-theme);
+
+/* You can add global styles to this file, and also import other style files */
+
+html {
+  min-height: 100%;
+  display: grid;
+}
+
+body {
+  margin: auto;
+  height: 100%;
+  width: 100%;
+  background: #F5F5F5;
+}
+
+app-root {
+  margin: auto;
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+@mixin loginContainer {
+  width: 278px;
+  height: 290px;
+  box-sizing: border-box;
+  padding: 30px 25px 40px;
+  margin-top: 25px;
+  border-radius: 3px;
+  text-align: center;
+  border: 0.5px solid #E0E0E0;
+  background: linear-gradient(180deg, #4090e9 0%, #7e45ae 100%);
+  box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+@mixin simpleButton {
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  cursor: pointer;
+  border-radius: 8px;
+  height: 44px;
+  width: 100px;
+  border: 1px solid #E0E0E0;
+  background: #3b83d2;
+  box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.25);
+
+  &[disabled] {
+    background: #929292;
+  }
+
+  &[hover] {
+    opacity: 0.8;
+  }
+}
+

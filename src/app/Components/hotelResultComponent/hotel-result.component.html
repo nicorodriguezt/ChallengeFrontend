@@ -1,0 +1,36 @@
+<div class="main-title">Search Results</div>
+<div class="result-container" #container *ngIf="hotelService.hotels().length != 0">
+  <mat-card *ngFor="let hotel of hotelService.hotels()" class="main-card">
+    <img class="hotel-image" src="{{'http://' + hotel.image}}" alt="Logo">
+    <div class="hotel-info hotel-info-center">
+      <div class="hotel-name">{{hotel.name}}</div>
+      <div class="hotel-checkin">{{'Checkin: ' + hotel.checkin}} </div>
+      <div class="hotel-checkout">{{'Checkout: ' + hotel.checkout}}</div>
+    </div>
+    <div class="hotel-info hotel-info-right">
+      <div class="hotel-price">{{hotel.total + ' USD'}}</div>
+      <div class="hotel-rating">
+        <div>{{hotel.starRating}}</div>
+        <mat-icon class="star-icon">star</mat-icon>
+      </div>
+      <div class="button-container">
+        <button mat-mini-fab aria-label="See more...">
+          <mat-icon>add</mat-icon>
+        </button>
+      </div>
+    </div>
+  </mat-card>
+  <div class="pages-container">
+    <div class="back-page-button-container" *ngIf="hotelService.currentPage() > 1">
+      <button (click)="goToPreviousPage(container)" mat-icon-button aria-label="See more...">
+        <mat-icon class="back-button">arrow_back_ios</mat-icon>
+      </button>
+    </div>
+    <div class="current-page">{{hotelService.currentPage()}}</div>
+    <div class="forward-page-button-container" *ngIf="hotelService.currentPage() < hotelService.totalPages()">
+      <button (click)="goToNextPage(container)"  mat-icon-button aria-label="Next page">
+        <mat-icon class="forward-button">arrow_forward_ios</mat-icon>
+      </button>
+    </div>
+  </div>
+</div>

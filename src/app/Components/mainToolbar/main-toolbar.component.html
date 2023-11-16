@@ -1,0 +1,13 @@
+<mat-toolbar class="main-toolbar">
+  <img class="toolbar-logo" (click)="router.navigateByUrl('')" src="https://www.id90travel.com/angular_assets/images/color-logo.png" alt="Logo">
+  <div class="toolbar-title">Search Hotel Service</div>
+  <div class="toolbar-user-container">
+    <p class="toolbar-logged-user">{{loggedUserName}}</p>
+    <button mat-mini-fab class="toolbar-logout-button" aria-label="Log out" (click)="logout()">
+      <mat-icon>logout</mat-icon>
+    </button>
+  </div>
+</mat-toolbar>
+<div class="main-content">
+  <router-outlet></router-outlet>
+</div>

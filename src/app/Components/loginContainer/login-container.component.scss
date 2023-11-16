@@ -1,0 +1,31 @@
+:host {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  justify-content: center;
+}
+
+.first-image {
+  position: absolute;
+  margin-top: -38px;
+  margin-left: -156px;
+  pointer-events:  none;
+}
+
+.second-image {
+  position: absolute;
+  margin-top: -22px;
+  margin-left: 32px;
+  pointer-events: none;
+}
+
+.main-container {
+  width: max-content;
+  height: max-content;
+  text-align: center;
+}
+
+
+

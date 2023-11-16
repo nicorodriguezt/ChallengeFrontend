@@ -1,0 +1,78 @@
+@import 'src/styles';
+
+.forgot-container {
+  margin-top: 30px;
+}
+
+.button-container {
+  margin-top: 30px;
+}
+
+.container-import {
+  @include loginContainer;
+}
+
+.button-import{
+  @include simpleButton;
+}
+
+/* Full-width inputs */
+
+input {
+  width: 100%;
+  padding: 5px;
+  margin: 8px 0;
+  height: 40px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.airlineFormField {
+  width: 100%;
+  padding: 0;
+  margin: 8px 0;
+  height: 40px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+::ng-deep .mat-mdc-text-field-wrapper {
+  width: 100% !important;
+  padding: 0 8px !important;
+  margin: 0 !important;
+  height: 40px !important;
+  display: inline-block !important;
+  box-sizing: border-box !important;
+  border-radius: 5px !important;
+}
+
+.airlineInput {
+  width: 100%;
+  height: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+.form-title {
+  color: #FFF;
+  text-align: center;
+  font-family: Avenir;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.forgot-psw {
+  color: #929292;
+  font-family: Avenir;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-decoration: none;
+}

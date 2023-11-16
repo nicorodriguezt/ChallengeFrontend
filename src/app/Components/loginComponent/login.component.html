@@ -1,0 +1,25 @@
+<div class="container-import" [formGroup]="form">
+  <label class="form-title" for="airline">Username</label>
+  <mat-form-field class="airlineFormField">
+    <input type="text"
+           id="airline"
+           class="airlineInput"
+           placeholder="Select your airline"
+           matInput
+           formControlName="airline"
+           [matAutocomplete]="auto">
+    <mat-autocomplete class="airlineAutocomplete" #auto="matAutocomplete">
+      <mat-option *ngFor="let airline of filteredOptions | async" [value]="airline">{{airline}}</mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+   <label class="form-title" for="usr">Username</label>
+   <input type="text" formControlName="username" placeholder="Enter Username" id="usr" name="usr">
+  <label class="form-title" for="psw">Password</label>
+  <input type="password" formControlName="password" placeholder="Enter Password" id="psw" name="psw">
+ </div>
+ <div class="button-container">
+   <button  class="button-import" (click)="login()" [disabled]="!form.valid">Login</button>
+ </div>
+ <div class="forgot-container">
+   <p class="forgot-psw">I forgot my password</p>
+ </div>

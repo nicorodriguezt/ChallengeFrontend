@@ -1,0 +1,61 @@
+@import 'src/styles';
+
+:host {
+  display: grid;
+  justify-content: center;
+  height: 100%;
+
+  mat-list{
+    overflow: auto;
+  }
+}
+
+.button-import{
+  @include simpleButton;
+}
+
+::ng-deep .main-title {
+  color: #3b83d2;
+  font-size: 28px !important;
+  margin-bottom: 32px !important;
+}
+
+.main-card {
+  width: 750px;
+  background: #dedddd;
+}
+
+.card-content {
+  height: 100%;
+}
+
+.content-container {
+  height: 90%;
+  display: grid;
+  margin-left: 32px;
+  margin-right: 32px;
+  grid-template-columns: auto;
+  grid-gap: 12px;
+}
+
+.card-footer {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+input {
+  width: 100%;
+  padding: 5px;
+  margin: 8px 0;
+  height: 40px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.date-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 12px;
+}
